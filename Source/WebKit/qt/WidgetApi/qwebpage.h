@@ -308,6 +308,9 @@ public:
     void setViewportSize(const QSize &size) const;
     ViewportAttributes viewportAttributesForSize(const QSize& availableSize) const;
 
+    void setDevicePixelRatio(float ratio);
+    float devicePixelRatio() const;
+
     QSize preferredContentsSize() const;
     void setPreferredContentsSize(const QSize &size) const;
     void setActualVisibleContentRect(const QRect& rect) const;

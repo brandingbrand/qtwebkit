@@ -1385,6 +1385,11 @@ void QWebPageAdapter::setDevicePixelRatio(float devicePixelRatio)
     page->setDeviceScaleFactor(devicePixelRatio);
 }
 
+float QWebPageAdapter::devicePixelRatio() const
+{
+    return page->deviceScaleFactor();
+}
+
 bool QWebPageAdapter::handleKeyEvent(QKeyEvent *ev)
 {
     Frame* frame = page->focusController()->focusedOrMainFrame();

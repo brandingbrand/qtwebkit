@@ -2046,6 +2046,16 @@ void QWebPagePrivate::_q_updateScreen(QScreen* screen)
         setDevicePixelRatio(screen->devicePixelRatio());
 }
 
+void QWebPage::setDevicePixelRatio(float ratio)
+{
+    d->setDevicePixelRatio(ratio);
+}
+
+float QWebPage::devicePixelRatio() const
+{
+    return d->devicePixelRatio();
+}
+
 static int getintenv(const char* variable)
 {
     bool ok;
